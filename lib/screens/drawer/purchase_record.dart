@@ -161,7 +161,7 @@ class _PurchaseRecordState extends State<PurchaseRecord> {
                                         children: [
                                           Text("₩1000"),
                                           Text(
-                                            "Delete".tr,
+                                            " Delete".tr,
                                             style: TextStyle(
                                                 color: Colors.blueGrey,
                                                 fontSize: 10),

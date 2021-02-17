@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:picknpay/screens/sign_up_page/signed_up.dart';
 import 'package:picknpay/widgets/size_boxes.dart';
 import 'package:get/get.dart';
 import 'package:picknpay/constant/kColors.dart';
@@ -65,7 +66,7 @@ class _BusinessCertificationState extends State<BusinessCertification> {
                 children: [
                   v20(),
                   Text(
-                    "Business certification".tr,
+                    "Business Registration".tr,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -76,8 +77,7 @@ class _BusinessCertificationState extends State<BusinessCertification> {
                     height: 20,
                   ),
                   Text(
-                    "Please register your business registration number and account"
-                        .tr,
+                    "Verify your business and bank account".tr,
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w600),
                     textAlign: TextAlign.center,
@@ -152,7 +152,7 @@ class _BusinessCertificationState extends State<BusinessCertification> {
                       sell.businessName.isNotEmpty &&
                       sell.bankName.isNotEmpty &&
                       sell.acNum.isNotEmpty) {
-                    Get.to(RegistrationComplete());
+                    Get.to(SignedUp());
                   } else {}
                 },
                 child: ZoomIn(
@@ -171,7 +171,7 @@ class _BusinessCertificationState extends State<BusinessCertification> {
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Text(
-                      "Enrollment".tr,
+                      "Register".tr,
                       style: plainWhite,
                     ),
                   ),

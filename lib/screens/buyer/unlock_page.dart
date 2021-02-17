@@ -21,7 +21,7 @@ class _UnlockPageState extends State<UnlockPage> {
           Spacer(
             flex: 2,
           ),
-          ZoomIn(child: SvgPicture.asset("assets/svg/lock.svg")),
+          ZoomIn(child: SvgPicture.asset("assets/svg/unlock.svg")),
           Spacer(),
           Text(
             "Put your phone on the door lock\nUnlock it".tr,

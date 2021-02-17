@@ -14,12 +14,12 @@ import 'package:picknpay/widgets/size_boxes.dart';
 import 'package:picknpay/screens/seller/new_stock_list.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
-class NewStock extends StatefulWidget {
+class RegisterItem extends StatefulWidget {
   @override
-  _NewStockState createState() => _NewStockState();
+  _RegisterItemState createState() => _RegisterItemState();
 }
 
-class _NewStockState extends State<NewStock> {
+class _RegisterItemState extends State<RegisterItem> {
   GetStorage box = GetStorage();
   List items = [];
   List wrong = [];
@@ -92,7 +92,7 @@ class _NewStockState extends State<NewStock> {
                 ),
                 Spacer(),
                 Text(
-                  box.read("newStock") ? "New Stock".tr : "Stock Receipt".tr,
+                  box.read("newStock") ? "Register Item".tr : "Restocking".tr,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,

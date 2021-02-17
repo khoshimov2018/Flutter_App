@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:picknpay/constant/kColors.dart';
 import 'package:picknpay/widgets/size_boxes.dart';
-import 'package:picknpay/screens/seller/new_stock.dart';
+import 'package:picknpay/screens/seller/register_item.dart';
 import 'package:picknpay/widgets/buttons/black_button.dart';
 
 class StockReceipt extends StatefulWidget {
@@ -55,7 +55,7 @@ class _StockReceiptState extends State<StockReceipt> {
               fontWeight: FontWeight.bold,
               fontSize: 20.0,
               onTap: () {
-                Get.to(NewStock());
+                Get.to(RegisterItem());
               }),
           v30(),
           blackButton(

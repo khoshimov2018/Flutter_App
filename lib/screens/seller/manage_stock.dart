@@ -11,12 +11,12 @@ import 'package:picknpay/widgets/on_delete_dialog.dart';
 import 'package:picknpay/widgets/seller_product_card.dart';
 import 'package:picknpay/widgets/size_boxes.dart';
 
-class InventoryManage extends StatefulWidget {
+class ManageStock extends StatefulWidget {
   @override
-  _InventoryManageState createState() => _InventoryManageState();
+  _ManageStockState createState() => _ManageStockState();
 }
 
-class _InventoryManageState extends State<InventoryManage> {
+class _ManageStockState extends State<ManageStock> {
   GetStorage box = GetStorage();
 
   @override
@@ -43,7 +43,7 @@ class _InventoryManageState extends State<InventoryManage> {
                     ),
                     Spacer(),
                     Text(
-                      "Inventory Management".tr,
+                      "Manage Stock".tr,
                       style: pageHeader,
                     ),
                     Spacer(
@@ -95,38 +95,6 @@ class _InventoryManageState extends State<InventoryManage> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Container(
-                    height: Get.height / 18,
-                    decoration: BoxDecoration(
-                      color: KColors.black,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.5),
-                          offset: Offset(0, -3),
-                          blurRadius: 10,
-                        )
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text(
-                          "Stock".tr,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16),
-                        ),
-                        Text(
-                          "Warehousing reservation".tr,
-                          style: TextStyle(
-                              color: Color(0xff707070),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16),
-                        )
-                      ],
-                    ),
-                  ),
                   Stack(
                     children: [
                       Container(

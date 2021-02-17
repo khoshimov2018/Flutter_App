@@ -15,11 +15,11 @@ class SignUpPage extends StatefulWidget {
 
 class _SignUpPageState extends State<SignUpPage> {
   List terms = [
-    "Everyone agrees.".tr,
-    "* Agree to the Terms of Service".tr,
-    "* Consent to collection and use of personal information".tr,
-    "Consent to additional collection of profile information".tr,
-    "Consent to use events and marketing".tr
+    "Agree to all terms of service and conditions".tr,
+    "[required] Terms of Service".tr,
+    "[required] Privacy Policy".tr,
+    "[optional] Additional profile information".tr,
+    "[optional] Receive promotional information".tr
   ];
 
   TermController termController = Get.put(TermController());
@@ -70,7 +70,7 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
           v10(),
           Text(
-            "Please agree to the terms and conditions".tr,
+            "Terms of service and conditions".tr,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
           ),
           v30(),
@@ -114,7 +114,17 @@ class _SignUpPageState extends State<SignUpPage> {
                                     color: Colors.white, fontSize: 12),
                               ),
                             ),
-                          )
+                          ),
+                          index == 1
+                              ? InkWell(
+                                  borderRadius: BorderRadius.circular(40),
+                                  onTap: () {},
+                                  child: Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    color: Colors.white,
+                                  ),
+                                )
+                              : SizedBox(),
                         ],
                       ),
                     ),

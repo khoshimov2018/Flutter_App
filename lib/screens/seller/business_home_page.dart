@@ -1,11 +1,12 @@
 import 'package:picknpay/screens/drawer/kDrawer.dart';
+import 'package:picknpay/screens/seller/door_management.dart';
 import 'package:picknpay/widgets/size_boxes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:picknpay/constant/kColors.dart';
-import 'package:picknpay/screens/seller/inventory_management.dart';
-import 'package:picknpay/screens/seller/new_stock.dart';
+import 'package:picknpay/screens/seller/manage_stock.dart';
+import 'package:picknpay/screens/seller/register_item.dart';
 import 'package:picknpay/screens/seller/sales_management.dart';
 import 'package:picknpay/screens/seller/seller_landing_page.dart';
 import 'package:picknpay/screens/seller/stock_receipt.dart';
@@ -40,13 +41,8 @@ class _BusinessHomePageState extends State<BusinessHomePage> {
                     Get.off(SellerLandingPage());
                   },
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      "Go Back".tr,
-                      style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
-                    ),
-                  ),
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Icon(Icons.arrow_back_ios_rounded)),
                 ),
               ],
             ),
@@ -67,32 +63,32 @@ class _BusinessHomePageState extends State<BusinessHomePage> {
               ),
             ),
           ),
-          v20(),
+          v60(),
           blackButton(
-              title: "New Stock".tr,
+              title: "Register Item".tr,
               fontWeight: FontWeight.bold,
               fontSize: 20.0,
               onTap: () {
                 box.write("newStock", true);
 
-                Get.to(NewStock());
+                Get.to(RegisterItem());
               }),
           v30(),
           blackButton(
-              title: "Stock Receipt".tr,
+              title: "Restocking".tr,
               fontWeight: FontWeight.bold,
               fontSize: 20.0,
               onTap: () {
                 box.write("newStock", false);
-                Get.to(StockReceipt());
+                Get.to(RegisterItem());
               }),
           v30(),
           blackButton(
-              title: "Inventory Management".tr,
+              title: "Manage Stock".tr,
               fontWeight: FontWeight.bold,
               fontSize: 20.0,
               onTap: () {
-                Get.to(InventoryManage());
+                Get.to(ManageStock());
               }),
           v30(),
           blackButton(
@@ -101,6 +97,14 @@ class _BusinessHomePageState extends State<BusinessHomePage> {
               fontSize: 20.0,
               onTap: () {
                 Get.to(SalesManagement());
+              }),
+          v30(),
+          blackButton(
+              title: "Door Management".tr,
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
+              onTap: () {
+                Get.to(DoorManagement());
               }),
         ],
       ),

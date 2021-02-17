@@ -87,14 +87,12 @@ const Map<String, String> koKR = {
   "Confirm Password": "비밀번호 확인",
   "Join": "가입",
   //sign up page
-  "Please agree to the terms and conditions": "이용약관에 동의해 주세요",
-  "Everyone agrees.": "모두 동의 합니다.",
-  "* Agree to the Terms of Service": "[필수] 서비스 이용약관 동의",
-  "* Consent to collection and use of personal information":
-      "[필수] 개인정보 수집 및 이용 동의",
-  "Consent to additional collection of profile information":
-      "[선택] 프로필 정보 추가 수집 동의",
-  "Consent to use events and marketing": "[선택] 이벤트 및 마케팅 활용 동의",
+  "Terms of service and conditions": "이용약관에 동의해 주세요",
+  "Agree to all terms of service and conditions": "모두 동의 합니다.",
+  "[required] Terms of Service": "[필수] 서비스 이용약관 동의",
+  "[required] Privacy Policy": "[필수] 개인정보 수집 및 이용 동의",
+  "[optional] Additional profile information": "[선택] 프로필 정보 추가 수집 동의",
+  "[optional] Receive promotional information": "[선택] 이벤트 및 마케팅 활용 동의",
   //change pwd dialog
   "Change Password": "비밀번호 변경",
   "Current Password": "현재 비밀번호",
@@ -131,19 +129,35 @@ const Map<String, String> koKR = {
   "Price": "가격",
   "Warehousing": "입고개수",
   //business certi...
-  "Business certification": "사업자 인증",
-  "Please register your business registration number and account":
-      "사업자 등록번호와 계좌를 등록해 주세요",
+  "Business Registration": "사업자 인증",
+  "Verify your business and bank account": "사업자 등록번호와 계좌를 등록해 주세요",
   "Company Registration Number": "사업자 등록번호",
   "Business Name": "상호명",
   "Name of Bank": "은행명",
   "Account Number": "계좌번호",
+  "Register": "등록",
+  "Save Code": "저장",
+  "Print the QR code and\nplace it in front of the store":
+      "스토어 QR 코드를 프린트 해서\n매장 앞에 붙여주세요",
+  "Signed Up!": "가입이 완료 되었습니다!",
   //business home page
   "SELLER": "SELLER ",
-  "New Stock": "신규 입고",
-  "Stock Receipt": "재고 입고",
-  "Inventory Management": "재고 관리",
+  "Register Item": "신규 입고",
+  "Restocking": "재고 입고",
+  "Manage Stock": "재고 관리",
   "Sales Management": "매출 관리",
+  "Door Management": "도어 관리",
+  "Door": "도어 관리",
+  "Register door lock NFC": "도어락 NFC 등록",
+  "Change door lock NFC": "도어락 NFC 변경",
+  "Store QR code": "스토어 QR 코드",
+  "Register NFC": "도어락 NFC 등록",
+  "Place your phone next to the NFC lock\nRegister the code":
+      "핸드폰을 도어락에 대어\nNFC 코드를 등록 해주세요",
+  "Change NFC": "도어락 NFC 변경",
+  "Place your phone next to the NFC lock\nChange the code":
+      "핸드폰을 도어락에 대어\nNFC 코드를 변경 해주세요",
+  "Save": "저장",
   //inventory manage
   "Pcs": "개",
   "Stock": "재고",

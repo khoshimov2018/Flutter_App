@@ -84,7 +84,7 @@ Widget kDrawer() {
               serviceCenterDialog();
             }),
         drawerItem(
-            title: "About".tr,
+            title: "About ".tr,
             onTap: () {
               aboutDialog();
             }),

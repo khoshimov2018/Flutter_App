@@ -95,15 +95,15 @@ const Map<String, String> enUS = {
   "Confirm Password": "Confirm Password",
   "Join": "Join",
   //sign up page
-  "Please agree to the terms and conditions":
-      "Please agree to the terms and conditions",
-  "Everyone agrees.": "Everyone agrees.",
-  "* Agree to the Terms of Service": "* Agree to the Terms of Service",
-  "* Consent to collection and use of personal information":
-      "* Consent to collection and use of personal information",
-  "Consent to additional collection of profile information":
-      "Consent to additional collection of profile information",
-  "Consent to use events and marketing": "Consent to use events and marketing",
+  "Terms of service and conditions": "Terms of service and conditions",
+  "Agree to all terms of service and conditions":
+      "Agree to all terms of service and conditions",
+  "[required] Terms of Service": "[required] Terms of Service",
+  "[required] Privacy Policy": "[required] Privacy Policy",
+  "[optional] Additional profile information":
+      "[optional] Additional profile information",
+  "[optional] Receive promotional information":
+      "[optional] Receive promotional information",
   //change pwd dialog
   "Change Password": "Change Password",
   "Current Password": "Current Password",
@@ -142,20 +142,37 @@ const Map<String, String> enUS = {
   "Price": "Price",
   "Warehousing": "Warehousing",
   //business certi...
-  "Business certification": "Business certification",
-  "Please register your business registration number and account":
-      "Please register your business registration number and account",
+  "Business Registration": "Business Registration",
+  "Verify your business and bank account":
+      "Verify your business and bank account",
   "Company Registration Number": "Company Registration Number",
   "Business Name": "Business Name",
   "Name of Bank": "Name of Bank",
   "Account Number": "Account Number",
+  "Register": "Register",
+  "Save Code": "Save Code",
+  "Print the QR code and\nplace it in front of the store":
+      "Print the QR code and\nplace it in front of the store",
+  "Signed Up!": "Signed Up!",
   //business home page
   "SELLER": "SELLER",
-  "New Stock": "New Stock",
-  "Stock Receipt": "Stock Receipt",
-  "Inventory Management": "Inventory Management",
+  "Register Item": "Register Item",
+  "Restocking": "Restocking",
+  "Manage Stock": "Manage Stock",
   "Sales Management": "Sales Management",
-  //inventory manage
+  "Door Management": "Door Management",
+  "Door": "Door",
+  "Register door lock NFC": "Register door lock NFC",
+  "Change door lock NFC": "Change door lock NFC",
+  "Store QR code": "Store QR code",
+  "Register NFC": "Register NFC",
+  "Place your phone next to the NFC lock\nRegister the code":
+      "Place your phone next to the NFC lock\nRegister the code",
+  "Change NFC": "Change NFC",
+  "Place your phone next to the NFC lock\nChange the code":
+      "Place your phone next to the NFC lock\nChange the code",
+  "Save": "Save",
+//inventory manage
   "Pcs": "Pcs",
   "Stock": "Stock",
   "Warehousing reservation": "Warehousing reservation",
