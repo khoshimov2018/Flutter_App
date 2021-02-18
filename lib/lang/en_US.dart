@@ -66,7 +66,7 @@ const Map<String, String> enUS = {
   "Your password is:": "Your password is:",
   "Verification Code": "Verification Code",
 
-  "Change": "변화",
+  "Change": "Change",
   "Re-Send": "재전송",
   //login failed
   "Login Failed": "Login Failed",

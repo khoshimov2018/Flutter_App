@@ -21,7 +21,7 @@ serviceCenterDialog() {
             dialogTitle("Service Center".tr),
             v40(),
             kTextField(
-              hintText: "Enter My Email".tr,
+              hintText: "My email address".tr,
             ),
             v40(),
             Expanded(
@@ -54,7 +54,7 @@ serviceCenterDialog() {
                       onTap: () {
                         Get.back();
                         defaultDialog(
-                            title: "You have sent your inquiry.".tr,
+                            title: "Your inquiry has been submitted.".tr,
                             header: "Service center".tr);
                       }),
                 ),

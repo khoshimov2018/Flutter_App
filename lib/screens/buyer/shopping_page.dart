@@ -148,31 +148,34 @@ class _ShoppingPageState extends State<ShoppingPage> {
                     ),
                   ),
                   Expanded(
-                    flex: 3,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 2),
-                      alignment: Alignment.center,
-                      child: items.length > 0
-                          ? ListView.builder(
-                              physics: BouncingScrollPhysics(),
-                              controller: scrollController,
-                              padding: EdgeInsets.all(7),
-                              itemBuilder: (BuildContext context, int index) {
-                                return purchaseCard(
-                                  title: "Perfume",
-                                  imageUrl:
-                                      "https://lh3.googleusercontent.com/proxy/udEqYER0GUxTySSTS56TB1zUfv4xsxzB5ZPL3ZkzTCyvIGvoIZW3uWvxMc3vfnJYooHowkqqVLslqmEtlgqEByyJ6V_ZS2xLGba4JzT0w8uMhPNQ3d5OF0sg60mCYOE9MHWnldczs5U",
-                                  price: "₩1000",
-                                  onDelete: () {
-                                    onDeleteDialog();
-                                  },
-                                );
-                              },
-                              itemCount: items.length,
-                            )
-                          : Text("Scan item barcode".tr),
-                    ),
-                  ),
+                      flex: 3,
+                      child: Stack(
+                        children: [
+                          Container(
+                              padding: EdgeInsets.symmetric(vertical: 2),
+                              alignment: Alignment.center,
+                              child: ListView.builder(
+                                physics: BouncingScrollPhysics(),
+                                controller: scrollController,
+                                padding: EdgeInsets.all(7),
+                                itemBuilder: (BuildContext context, int index) {
+                                  return purchaseCard(
+                                    title: "Perfume",
+                                    imageUrl:
+                                        "https://lh3.googleusercontent.com/proxy/udEqYER0GUxTySSTS56TB1zUfv4xsxzB5ZPL3ZkzTCyvIGvoIZW3uWvxMc3vfnJYooHowkqqVLslqmEtlgqEByyJ6V_ZS2xLGba4JzT0w8uMhPNQ3d5OF0sg60mCYOE9MHWnldczs5U",
+                                    price: "₩1000",
+                                    onDelete: () {
+                                      onDeleteDialog();
+                                    },
+                                  );
+                                },
+                                itemCount: items.length,
+                              )),
+                          items.length == 0
+                              ? Center(child: Text("Scan the store QR code"))
+                              : SizedBox(),
+                        ],
+                      )),
                 ],
               ),
             ),

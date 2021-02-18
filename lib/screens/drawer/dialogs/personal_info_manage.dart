@@ -21,7 +21,7 @@ personalInfoManageDialog() {
             dialogTitle("ID Information".tr),
             v20(),
             whiteDialogButton(
-                title: "Update Your\nPhone Number".tr,
+                title: "Update your phone number".tr,
                 onTap: () {
                   Get.back();
                   phoneVerificationDialog();

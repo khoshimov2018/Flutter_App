@@ -188,29 +188,32 @@ class _RegisterItemState extends State<RegisterItem> {
                     ),
                   ),
                   Expanded(
-                    flex: 3,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 2),
-                      alignment: Alignment.center,
-                      child: items.length > 0
-                          ? ListView.builder(
-                              controller: scrollController,
-                              physics: BouncingScrollPhysics(),
-                              padding: EdgeInsets.all(7),
-                              itemBuilder: (BuildContext context, int index) {
-                                return sellerProductCard(
-                                  price: "₩15,000",
-                                  imageUrl:
-                                      "https://www.incimages.com/uploaded_files/image/1920x1080/*Barcode_32896.jpg",
-                                  title: "082830100012 / Ice Cream",
-                                  pcs: "20",
-                                );
-                              },
-                              itemCount: items.length,
-                            )
-                          : Text("Scan item barcode".tr),
-                    ),
-                  ),
+                      flex: 3,
+                      child: Stack(
+                        children: [
+                          Container(
+                              padding: EdgeInsets.symmetric(vertical: 2),
+                              alignment: Alignment.center,
+                              child: ListView.builder(
+                                controller: scrollController,
+                                physics: BouncingScrollPhysics(),
+                                padding: EdgeInsets.all(7),
+                                itemBuilder: (BuildContext context, int index) {
+                                  return sellerProductCard(
+                                    price: "₩15,000",
+                                    imageUrl:
+                                        "https://www.incimages.com/uploaded_files/image/1920x1080/*Barcode_32896.jpg",
+                                    title: "082830100012 / Ice Cream",
+                                    pcs: "20",
+                                  );
+                                },
+                                itemCount: items.length,
+                              )),
+                          items.length == 0
+                              ? Center(child: Text("Scan the store QR code"))
+                              : SizedBox()
+                        ],
+                      )),
                 ],
               ),
             ),

@@ -234,4 +234,5 @@ const Map<String, String> koKR = {
   //
   "Choose a store to manage": "관리할 사업장을 선택해주세요",
   "Add Photo": "사진 변경",
+  "Your inquiry has been submitted.": "문의 사항을 보냈습니다.",
 };

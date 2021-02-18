@@ -33,16 +33,11 @@ class _SellerLandingPageState extends State<SellerLandingPage> {
               children: [
                 InkWell(
                   onTap: () {
-                    Get.off(LoginPage());
+                    Get.to(LoginPage());
                   },
                   child: Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Text(
-                      "back".tr,
-                      style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
-                    ),
-                  ),
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Icon(Icons.arrow_back_ios_rounded)),
                 ),
                 InkWell(
                     onTap: () {

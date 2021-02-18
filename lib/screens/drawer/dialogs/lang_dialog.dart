@@ -8,6 +8,7 @@ import 'package:picknpay/widgets/buttons/white_dialog_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 langDialog() {
+  var num;
   return Get.dialog(
     Padding(
       padding: EdgeInsets.all(10),
@@ -32,11 +33,7 @@ langDialog() {
               height: Get.height / 4,
               child: CupertinoPicker(
                 onSelectedItemChanged: (int value) async {
-                  SharedPreferences pref =
-                      await SharedPreferences.getInstance();
-                  LocalizationService()
-                      .changeLocale(value == 0 ? "English" : "한국어");
-                  pref.setString("lang", value == 0 ? "English" : "한국어");
+                  num = value;
                 },
                 itemExtent: 50,
                 children: [
@@ -52,7 +49,13 @@ langDialog() {
                   Expanded(
                     child: whiteDialogButton(
                       title: "Change".tr,
-                      onTap: () {
+                      onTap: () async {
+                        SharedPreferences pref =
+                            await SharedPreferences.getInstance();
+                        LocalizationService().changeLocale(
+                            num == 0 || num == null ? "English" : "한국어");
+                        pref.setString("lang",
+                            num == 0 || num == null ? "English" : "한국어");
                         Get.back();
                       },
                     ),

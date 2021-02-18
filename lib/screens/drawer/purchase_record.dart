@@ -17,22 +17,23 @@ class _PurchaseRecordState extends State<PurchaseRecord> {
       backgroundColor: KColors.primaryColor,
       body: Column(
         children: [
-          v20(),
+          v15(),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 InkWell(
-                  onTap: () => Get.back(),
-                  child: Text(
-                    "back".tr,
-                    style: TextStyle(fontWeight: FontWeight.w600),
-                  ),
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Icon(Icons.arrow_back_ios_rounded)),
                 ),
                 Spacer(),
                 Text(
-                  "Purchase Record".tr,
+                  "Purchase History".tr,
                   style: pageHeader,
                 ),
                 Spacer(
@@ -160,12 +161,6 @@ class _PurchaseRecordState extends State<PurchaseRecord> {
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text("₩1000"),
-                                          Text(
-                                            " Delete".tr,
-                                            style: TextStyle(
-                                                color: Colors.blueGrey,
-                                                fontSize: 10),
-                                          ),
                                         ],
                                       ),
                                     )
