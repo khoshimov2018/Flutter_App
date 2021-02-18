@@ -16,7 +16,7 @@ paymentManageDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Payment Management".tr),
+            dialogTitle("Payment".tr),
             v10(),
             Text(
               "This page will change\nDepending on the\nPayment system provider"
@@ -29,7 +29,7 @@ paymentManageDialog() {
               children: [
                 Expanded(
                   child: whiteDialogButton(
-                      title: "Change".tr,
+                      title: "Update".tr,
                       onTap: () {
                         Get.back();
                       }),

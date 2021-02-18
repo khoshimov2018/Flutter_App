@@ -17,10 +17,10 @@ phoneVerifiedDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Phone Number Change".tr),
+            dialogTitle("Update Your\nPhone Number".tr),
             v10(),
             Text(
-              "${"Your phone number has been verified.".tr} 010-xxxx-xxxx\n${"Would you like to change it to?".tr}",
+              "${"Your phone number has been verified.".tr}\n${"Will you update to".tr}\n010-xxxx-xxxx?",
               style: plainWhite,
               textAlign: TextAlign.center,
             ),
@@ -29,7 +29,7 @@ phoneVerifiedDialog() {
               children: [
                 Expanded(
                   child: whiteDialogButton(
-                      title: "Change".tr,
+                      title: "Update".tr,
                       onTap: () {
                         Get.back();
                         phoneChangedDialog(); //show

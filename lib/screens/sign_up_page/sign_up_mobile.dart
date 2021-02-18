@@ -63,7 +63,7 @@ class _SignUpMobileState extends State<SignUpMobile> {
           ),
           v20(),
           Text(
-            "Mobile phone authentication\nCompleted!".tr,
+            "Number verified!".tr,
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
@@ -74,7 +74,7 @@ class _SignUpMobileState extends State<SignUpMobile> {
             height: 20,
           ),
           Text(
-            "Please Set Password".tr,
+            "Set your password".tr,
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
           ),
           SizedBox(
@@ -93,7 +93,7 @@ class _SignUpMobileState extends State<SignUpMobile> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
             child: kTextField(
-                hintText: "Confirm Password".tr,
+                hintText: "Re-enter Password".tr,
                 obscureText: true,
                 controller: confirmPassController,
                 onChanged: (value) {
@@ -150,7 +150,7 @@ class _SignUpMobileState extends State<SignUpMobile> {
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Text(
-                      "Join".tr,
+                      "sign up".tr,
                       style: plainWhite,
                     ),
                   ),

@@ -17,10 +17,10 @@ forgotShowPwd() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Forgot your Password".tr),
+            dialogTitle("Find Your Password".tr),
             v10(),
             Text(
-              "${"password".tr} is\nSddflk334234is.",
+              "${"Your password is:".tr} is\nSddflk334234is.",
               style: plainWhite,
               textAlign: TextAlign.center,
             ),

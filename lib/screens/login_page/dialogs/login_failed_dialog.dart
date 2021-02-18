@@ -19,7 +19,7 @@ loginFailedDialog() {
             dialogTitle("Login Failed".tr),
             v10(),
             Text(
-              "Phone number or password\nDoes not match.".tr,
+              "The username or password\nyou entered is incorrect.".tr,
               style: plainWhite,
               textAlign: TextAlign.center,
             ),

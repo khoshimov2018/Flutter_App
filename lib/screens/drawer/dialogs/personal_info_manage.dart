@@ -18,10 +18,10 @@ personalInfoManageDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Personal Information Management".tr),
+            dialogTitle("ID Information".tr),
             v20(),
             whiteDialogButton(
-                title: "Phone Number Change".tr,
+                title: "Update Your\nPhone Number".tr,
                 onTap: () {
                   Get.back();
                   phoneVerificationDialog();

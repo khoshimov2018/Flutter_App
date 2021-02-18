@@ -40,7 +40,7 @@ serviceCenterDialog() {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   filled: true,
-                  hintText: "Please enter your Inquiry".tr,
+                  hintText: "What is your inquiry?".tr,
                   fillColor: Colors.white,
                 ),
               ),

@@ -50,7 +50,7 @@ Widget purchaseCard(
                   child: InkWell(
                     onTap: onDelete,
                     child: Text(
-                      "Delete".tr,
+                      "Remove".tr,
                       style: TextStyle(color: Colors.blueGrey, fontSize: 10),
                     ),
                   ),

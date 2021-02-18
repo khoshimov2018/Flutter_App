@@ -23,11 +23,10 @@ changeCompanyNameDialog() {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              dialogTitle("Change of Company Name".tr),
+              dialogTitle("Change Name".tr),
               v40(),
               Text(
-                "Please register your business registration number and account"
-                    .tr,
+                "Enter new name.".tr,
                 style: plainWhite,
                 textAlign: TextAlign.center,
               ),
@@ -44,9 +43,9 @@ changeCompanyNameDialog() {
                         onTap: () {
                           Get.back();
                           defaultDialog(
-                              header: "Company name changed".tr,
+                              header: "Name Changed".tr,
                               title:
-                                  "Company name “Pick and Go”\nHas been changed to’***’"
+                                  "‘Pick N Go’ has been\nChanged to ‘*******’."
                                       .tr);
                         }),
                   ),

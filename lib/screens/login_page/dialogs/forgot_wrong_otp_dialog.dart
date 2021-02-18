@@ -17,10 +17,10 @@ forgotWrongOtpDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Forgot your Password".tr),
+            dialogTitle("Find Your Password".tr),
             v10(),
             Text(
-              "The authentication number is incorrect.".tr,
+              "Incorrect verification code.".tr,
               style: plainWhite,
               textAlign: TextAlign.center,
             ),

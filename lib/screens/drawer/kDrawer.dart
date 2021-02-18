@@ -5,6 +5,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:picknpay/constant/kColors.dart';
 import 'package:picknpay/screens/drawer/dialogs/about_dialog.dart';
 import 'package:picknpay/screens/drawer/dialogs/delete_id_dialog.dart';
+import 'package:picknpay/screens/drawer/dialogs/lang_dialog.dart';
 import 'package:picknpay/screens/drawer/dialogs/logout_dialog.dart';
 import 'package:picknpay/screens/drawer/dialogs/notification_dialog.dart';
 import 'package:picknpay/screens/drawer/dialogs/payment_manage_dialog.dart';
@@ -42,13 +43,11 @@ Widget kDrawer() {
                     Get.back();
                   }),
             ),
-            drawerItem(title: "Management".tr, fontWeight: FontWeight.bold)
+            drawerItem(title: "Settings".tr, fontWeight: FontWeight.bold)
           ],
         ),
         drawerItem(
-            title: box.read("buyer")
-                ? "Payment management".tr
-                : "Account Management".tr,
+            title: box.read("buyer") ? "Payment".tr : "Bank Account".tr,
             onTap: () {
               box.read("buyer")
                   ? paymentManageDialog()
@@ -57,23 +56,29 @@ Widget kDrawer() {
         box.read("buyer")
             ? SizedBox()
             : drawerItem(
-                title: "Business Management".tr,
+                title: "Store Management".tr,
                 onTap: () {
                   businessManageDialog();
                 }),
         drawerItem(
-            title: "Personal Information management".tr,
+            title: "ID Information".tr,
             onTap: () {
               personalInfoManageDialog();
             }),
         drawerItem(
-            title: "Notification Settings".tr,
+            title: "Notification".tr,
             onTap: () {
               notificationDialog();
             }),
+        drawerItem(
+            title: "Language".tr,
+            onTap: () {
+              langDialog();
+            }),
+
         box.read("buyer")
             ? drawerItem(
-                title: "Purchase Record".tr,
+                title: "Purchase History".tr,
                 onTap: () {
                   Get.to(PurchaseRecord());
                 })
@@ -88,7 +93,6 @@ Widget kDrawer() {
             onTap: () {
               aboutDialog();
             }),
-        FadeInRight(child: myPopMenu()),
 
         drawerItem(
             title: "Log Out".tr,
@@ -145,7 +149,7 @@ Widget myPopMenu() {
       alignment: Alignment.centerRight,
       padding: EdgeInsets.all(10),
       child: Text(
-        "Change Language".tr,
+        "Language".tr,
         style: TextStyle(
             fontWeight: FontWeight.w600, color: Colors.white, fontSize: 18),
       ),

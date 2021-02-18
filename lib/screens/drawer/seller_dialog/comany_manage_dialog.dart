@@ -19,17 +19,17 @@ companyManageDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Pick n Go Management".tr),
+            dialogTitle("Pick n Go".tr),
             v30(),
             whiteDialogButton(
-                title: "Change of Company Name".tr,
+                title: "Change Business name".tr,
                 onTap: () {
                   Get.back();
                   changeCompanyNameDialog();
                 }),
             v60(),
             whiteDialogButton(
-                title: "Delete Business".tr,
+                title: "Delete Store".tr,
                 onTap: () {
                   Get.back();
                   deleteCompanyDialog();

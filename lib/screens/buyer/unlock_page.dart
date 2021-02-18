@@ -51,7 +51,7 @@ class _UnlockPageState extends State<UnlockPage> {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: Text(
-                            "Next".tr,
+                            "Unlocked".tr,
                             style: plainWhite,
                           ),
                         ),

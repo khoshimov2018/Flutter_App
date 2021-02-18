@@ -17,11 +17,10 @@ deleteCompanyDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Delete Business".tr),
+            dialogTitle("Delete Store".tr),
             v10(),
             Text(
-              "The company name “Pick and Go”\nAre you sure you want to delete?"
-                  .tr,
+              "Would you like to\nDelete ‘Pick N Go’?".tr,
               style: plainWhite,
               textAlign: TextAlign.center,
             ),
@@ -34,10 +33,8 @@ deleteCompanyDialog() {
                       onTap: () {
                         Get.back();
                         defaultDialog(
-                            header: "Business deletion complete".tr,
-                            title:
-                                "Company name “Pick and Go”\nHas been deleted"
-                                    .tr);
+                            header: "Delete Complete".tr,
+                            title: "‘Pick N Go’ has been\ndeleted.".tr);
                       }),
                 ),
                 SizedBox(

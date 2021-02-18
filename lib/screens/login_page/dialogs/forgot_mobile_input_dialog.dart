@@ -25,10 +25,10 @@ forgotMobileInputDialog() {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              dialogTitle("Forgot your Password".tr),
+              dialogTitle("Find Your Password".tr),
               v10(),
               Text(
-                "Do you want to use mobile phone text authentication?".tr,
+                "Verify with your phone number.".tr,
                 style: plainWhite,
                 textAlign: TextAlign.center,
               ),
@@ -42,7 +42,7 @@ forgotMobileInputDialog() {
                 children: [
                   Expanded(
                     child: whiteDialogButton(
-                        title: "Certification".tr,
+                        title: "Verify".tr,
                         onTap: () {
                           Get.back();
                           if (mobileController.text == phone) {

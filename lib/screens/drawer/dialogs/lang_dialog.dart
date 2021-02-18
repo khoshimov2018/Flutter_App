@@ -2,11 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:picknpay/constant/kColors.dart';
+import 'package:picknpay/services/localization_service.dart';
 import 'package:picknpay/style/text_styles.dart';
+import 'package:picknpay/widgets/buttons/white_dialog_button.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-import 'buttons/white_dialog_button.dart';
-
-onDeleteDialog() {
+langDialog() {
   return Get.dialog(
     Padding(
       padding: EdgeInsets.all(10),
@@ -26,21 +27,22 @@ onDeleteDialog() {
                     TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 10),
-              child: Text(
-                "Ice Cream",
-                style: plainWhite,
-              ),
-            ),
             Container(
               color: Colors.white,
               height: Get.height / 4,
               child: CupertinoPicker(
-                onSelectedItemChanged: (int value) {},
+                onSelectedItemChanged: (int value) async {
+                  SharedPreferences pref =
+                      await SharedPreferences.getInstance();
+                  LocalizationService()
+                      .changeLocale(value == 0 ? "English" : "한국어");
+                  pref.setString("lang", value == 0 ? "English" : "한국어");
+                },
                 itemExtent: 50,
-                children: List.generate(
-                    30, (index) => Center(child: Text("${index + 1}"))),
+                children: [
+                  Center(child: Text("English")),
+                  Center(child: Text("한국어")),
+                ],
               ),
             ),
             Padding(
@@ -49,7 +51,7 @@ onDeleteDialog() {
                 children: [
                   Expanded(
                     child: whiteDialogButton(
-                      title: "Remove".tr,
+                      title: "Change".tr,
                       onTap: () {
                         Get.back();
                       },

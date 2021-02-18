@@ -109,7 +109,7 @@ class _BusinessCertificationState extends State<BusinessCertification> {
                       horizontal: 32,
                     ),
                     child: kTextField(
-                        hintText: "Name of Bank".tr,
+                        hintText: "Bank".tr,
                         controller: bankName,
                         onChanged: (value) {
                           sell.bankName.value = value;

@@ -16,11 +16,10 @@ phoneDoesNotMatchDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Phone Number Change".tr),
+            dialogTitle("Update Your\nPhone Number".tr),
             v10(),
             Text(
-              "Your phone number does not match.\nPlease verify your new number."
-                  .tr,
+              "Will you update to your\nnew phone number?".tr,
               style: plainWhite,
             ),
             v10(),
@@ -28,7 +27,7 @@ phoneDoesNotMatchDialog() {
               children: [
                 Expanded(
                   child: whiteDialogButton(
-                      title: "Change".tr,
+                      title: "Update".tr,
                       onTap: () {
                         Get.back();
                       }),

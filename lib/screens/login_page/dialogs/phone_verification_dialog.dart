@@ -17,7 +17,7 @@ phoneVerificationDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Phone Number Change".tr),
+            dialogTitle("Update Your\nPhone Number".tr),
             v10(),
             Text(
               "This page will change Depending on the Verification system provider",
@@ -29,7 +29,7 @@ phoneVerificationDialog() {
               children: [
                 Expanded(
                   child: whiteDialogButton(
-                      title: "Certification".tr,
+                      title: "Update".tr,
                       onTap: () {
                         Get.back();
                         phoneVerifiedDialog(); //show

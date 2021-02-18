@@ -7,29 +7,30 @@ const Map<String, String> enUS = {
   'password': "Password",
   'login': 'Log In',
   'forgot your': 'Forgot your',
-  'phone number change': "Phone number Changes",
+  'Update your phone number': "Update your phone number",
   'sign up': "Sign Up",
   ' password?': " password?",
   //landing page
-  "Push the button\nPlease scan the store QR code":
-      "Push the button\nPlease scan the store QR code",
+  "Press the button to\nscan the store QR code":
+      "Press the button to\nscan the store QR code",
   //camera feed
   "Cancel": "Cancel",
   "Scan the store QR code": "Scan the store QR code",
   //branch display
-  "‘Pick and Go Bangi Branch’\nIs this correct?":
-      "‘Pick and Go Bangi Branch’\nIs this correct?",
-  "Yeah": "Yeah",
+  "Are you at\n‘Pick N Go Bangi’?": "Are you at\n‘Pick N Go Bangi’?",
+  "Yes": "Yes",
   "No": "No",
   //unlock page
-  "Put your phone on the door lock\nUnlock it":
-      "Put your phone on the door lock\nUnlock it",
+  "Place your phone next to the NFC lock\nto unlock the door":
+      "Place your phone next to the NFC lock\nto unlock the door",
+  "Unlocked": "Unlocked",
   "Next": "Next",
   //shopping page
   "Go Back": "Go Back",
-  "Delete": "Delete",
+  "Scan item barcode": "Scan item barcode",
+  "Remove": "Remove",
   "Total:": "Total:",
-  "Payment": "Payment",
+  "Pay": "Pay",
   //check cart
   "Check Cart": "Check Cart",
   "Select number of Deletions": "Select number of Deletions",
@@ -38,61 +39,61 @@ const Map<String, String> enUS = {
   "GO!": "GO!",
   "Complete": "Complete",
   //drawer
-  "Management": "Management",
-  "Payment management": "Payment management",
-  "Account Management": "Account Management",
-  "Business Management": "Business Management",
-  "Personal Information management": "Personal Information management",
-  "Notification Settings": "Notification Settings",
-  "Purchase Record": "Purchase Record",
+  "Settings": "Settings",
+  "Payment": "Payment",
+  "Bank Account": "Bank Account",
+  "Store Management": "Store Management",
+  "ID Information": "ID Information",
+  "Notification": "Notification",
+  "Purchase History": "Purchase History",
   "Service Center": "Service Center",
   "About": "About",
   "Log Out": "Log Out",
   "Delete ID": "Delete ID",
   //forgot dialogs
-  "Forgot your Password": "Forgot your Password",
-  "Do you want to use mobile phone text authentication?":
-      "Do you want to use mobile phone text authentication?",
-  "Certification": "Certification",
-  "This number is not registered.": "This number is not registered.",
-  "The authentication number is incorrect.":
-      "The authentication number is incorrect.",
+  "Find Your Password": "Find Your Password",
+  "Verify with your phone number.": "Verify with your phone number.",
+  "Verify": "Verify",
+  "Certification": "인증",
+  "The number you have entered\nis not registered.":
+      "The number you have entered\nis not registered.",
+  "Incorrect verification code.": "Incorrect verification code.",
   "Confirm": "Confirm",
-  "Certification Number": "Certification Number",
-  "The authentication number sent by text message Please enter":
-      "The authentication number sent by text message Please enter",
-  "Didn't you get your ID Number ?": "Didn't you get your ID Number ?",
-  "Change": "Change",
-  "Re-Send": "Re-Send",
+  "Certification Number": "인증번호",
+  "Enter the verification code\nsent to your phone number.":
+      "Enter the verification code\nsent to your phone number.",
+  "Did not get the code?": "Did not get the code?",
+  "Your password is:": "Your password is:",
+  "Verification Code": "Verification Code",
+
+  "Change": "변화",
+  "Re-Send": "재전송",
   //login failed
   "Login Failed": "Login Failed",
-  "Phone number or password\nDoes not match.":
-      "Phone number or password\nDoes not match.",
+  "The username or password\nyou entered is incorrect.":
+      "The username or password\nyou entered is incorrect.",
   //phone change dialogs
-  "Phone Number Change": "Phone Number Change",
-  "To a new number in your name\nDo you want to change it?":
-      "To a new number in your name\nDo you want to change it?",
-  "Your phone number has changed.": "Your phone number has changed.",
-  "Your phone number does not match.\nPlease verify your new number.":
-      "Your phone number does not match.\nPlease verify your new number.",
+  "Update Your\nPhone Number": "Update Your\nPhone Number",
+  "Your phone number is not up to date.\nPlease update your phone number.":
+      "Your phone number is not up to date.\nPlease update your phone number.",
+  "Your phone number has been updated.": "Your phone number has been updated.",
+  "Will you update to your\nnew phone number?":
+      "Will you update to your\nnew phone number?",
   "Your phone number has been verified.":
       "Your phone number has been verified.",
-  "Would you like to change it to?": "Would you like to change it to?",
+  "Will you update to": "Will you update to",
+  "Update": "Update",
   //sign up dialogs
   "Password is\nDoes not Match": "Password is\nDoes not Match",
   //card registration
-  "Card Registration": "Card Registration",
-  "Congratulations on Signing up!": "Congratulations on Signing up!",
-  "Please register the credit card to be used":
-      "Please register the credit card to be used",
-  "This page will change Depending on the Payment system provider":
-      "This page will change Depending on the Payment system provider",
+  "Credit Card Registration": "Credit Card Registration",
+  "Register your credit card": "Register your credit card",
+  "Next time": "Next time",
   "Enrollment": "Enrollment",
   //sign up mobile
-  "Mobile phone authentication\nCompleted!":
-      "Mobile phone authentication\nCompleted!",
-  "Please Set Password": "Please Set Password",
-  "Confirm Password": "Confirm Password",
+  "Number verified!": "Number verified!",
+  "Set your password": "Set your password",
+  "Re-enter Password": "Re-enter Password",
   "Join": "Join",
   //sign up page
   "Terms of service and conditions": "Terms of service and conditions",
@@ -111,8 +112,7 @@ const Map<String, String> enUS = {
   //deleteId dialog
   "ID": "ID",
   "Do you want to delete it?": "Do you want to delete it?",
-  "Please enter your current ID and password.":
-      "Please enter your current ID and password.",
+  "Enter your current password.": "Enter your current password.",
   //logout dialog
   "Would you like to log out?": "Would you like to log out?",
   "New Password": "New Password",
@@ -120,18 +120,17 @@ const Map<String, String> enUS = {
   "Your Password has been Changed": "Your Password has been Changed",
   "Password do not match": "Password do not match",
   //notification dialog
-  "Preview": "Preview",
-  "Sound while running app": "Sound while running app",
-  "Vibrating while running App": "Vibrating while running App",
+  "Show Previews": "Show Previews",
+  "In-app Notifications": "In-app Notifications",
+  "In-app Vibration": "In-app Vibration",
   //payment management dialog
-  "Payment Management": "Payment Management",
   "This page will change\nDepending on the\nPayment system provider":
       "This page will change\nDepending on the\nPayment system provider",
   //personal info dialog
   "Personal Information Management": "Personal Information Management",
   //service dialog
-  "Enter My Email": "Enter My Email",
-  "Please enter your Inquiry": "Please enter your Inquiry",
+  "My email address": "My email address",
+  "What is your inquiry?": "What is your inquiry?",
   "Send": "Send",
   //edit item
   "Photo Registration": "Photo Registration",
@@ -147,7 +146,7 @@ const Map<String, String> enUS = {
       "Verify your business and bank account",
   "Company Registration Number": "Company Registration Number",
   "Business Name": "Business Name",
-  "Name of Bank": "Name of Bank",
+  "Bank": "Bank",
   "Account Number": "Account Number",
   "Register": "Register",
   "Save Code": "Save Code",
@@ -189,19 +188,18 @@ const Map<String, String> enUS = {
   "By Item": "By Item",
   "By Category": "By Category",
   //seller landing
-  "Please select a business site to manage":
-      "Please select a business site to manage",
+  "Choose a store to change account.": "Choose a store to change account.",
   "Pick and Go": "Pick and Go",
   //stock reciept
   "QR Receipt": "QR Receipt",
   "Individual warehousing": "Individual warehousing",
   //business manage
   "Pick and go": "Pick and go",
-  "Add Business": "Add Business",
+  "Add Store": "Add Store",
+  "Enter Business and bank account.": "Enter Business and bank account.",
   "Please select a business to change account":
       "Please select a business to change account",
-  "Please enter a new account to change":
-      "Please enter a new account to change",
+  "Enter new bank account.": "Enter new bank account.",
   "Account change completed": "Account change completed",
   "The account with the trade name “Pick and Go”\nHas been changed.":
       "The account with the trade name “Pick and Go”\nHas been changed.",
@@ -213,6 +211,20 @@ const Map<String, String> enUS = {
       "The company name’***’\nHas been registered",
   "Business certification failed\nplease try again":
       "Business certification failed\nplease try again",
+  "Business Registration Number": "Business Registration Number",
+  "Store Name": "Store Name",
+  "Bank Name": "Bank Name",
+  "Bank Account Number": "Bank Account Number",
+  "Store Added": "Store Added",
+  "‘******’ has been\nadded to your account.":
+      "‘******’ has been\nadded to your account.",
+  "Change Business name": "Change Business name",
+  "Delete Store": "Delete Store",
+  "Change Name": "Change Name",
+  "Enter new name.": "Enter new name.",
+  "Name Changed": "Name Changed",
+  "‘Pick N Go’ has been\nChanged to ‘*******’.":
+      "‘Pick N Go’ has been\nChanged to ‘*******’.",
   //change company name
   "Change of Company Name": "Change of Company Name",
   "Company name changed": "Company name changed",
@@ -227,7 +239,15 @@ const Map<String, String> enUS = {
   "Company name “Pick and Go”\nHas been deleted":
       "Company name “Pick and Go”\nHas been deleted",
   //deleted
+  "Would you like to\nDelete ‘Pick N Go’?":
+      "Would you like to\nDelete ‘Pick N Go’?",
+  "‘Pick N Go’ has been\ndeleted.": "‘Pick N Go’ has been\ndeleted.",
+  "Delete Complete": "Delete Complete",
   "Pick and Pay\nID is\nDeleted": "Pick and Pay\nID is\nDeleted",
-  "Change Language": "Change Language",
+  "Language": "Language",
   "Required": "Required",
+
+  //
+  "Choose a store to manage": "Choose a store to manage",
+  "Add Photo": "Add Photo",
 };

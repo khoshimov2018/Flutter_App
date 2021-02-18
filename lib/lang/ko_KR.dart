@@ -7,27 +7,28 @@ const Map<String, String> koKR = {
   'password': "비밀번호",
   'login': '로그인',
   'forgot your': '잊었 어',
-  'phone number change': "전화번호 변경",
+  'Update your phone number': "전화번호 변경",
   'sign up': "회원 가입",
   ' password?': " 비밀번호?",
   //landing page
-  "Push the button\nPlease scan the store QR code":
-      "버튼을 눌러서\n스토어 QR 코드를 스캔해 주세요",
+  "Press the button to\nscan the store QR code": "버튼을 눌러서\n스토어 QR 코드를 스캔해 주세요",
   //camera feed
-  "Cancel": "취소",
-  "Scan the store QR code": "스토어 QR 코드를 스캔해주세요",
+  "Cancel": "취 소",
+  "Scan the store  QR code": "스토어 QR 코드를 스캔해주세요",
   //branch display
-  "‘Pick and Go Bangi Branch’\nIs this correct?": "‘픽앤고 방이점’이 맞나요?",
-  "Yeah": "네",
+  "Are you at\n‘Pick  N Go Bangi’?": "‘픽앤고 방이점’이 맞나요?",
+  "Yes": "네",
   "No": "아니요",
   //unlock page
-  "Put your phone on the door lock\nUnlock it": "핸드폰을 도어락에 대어\n잠금을 풀어주세요",
+  "Place your phone next to the NFC lock\nto unlock the door":
+      "핸드폰을 도어락에 대어\n잠금을 풀어주세요",
+  "Unlocked": "다음",
   "Next": "다음",
   //shopping page
   "Go Back": "뒤로",
-  "Delete": "삭제",
+  "Remove": "삭제",
   "Total:": "합계:",
-  "Payment": "결제",
+  "Pay": "결제",
   //check cart
   "Check Cart": "카트 확인",
   "Select number of Deletions": "삭제 개수 선택",
@@ -36,55 +37,59 @@ const Map<String, String> koKR = {
   "GO!": "GO!",
   "Complete": "완료",
   //drawer
-  "Management": "관리",
-  "Payment management": "결제 관리",
-  "Account Management": "계정 관리",
-  "Business Management": "경영 관리",
-  "Personal Information management": "개인 정보 관리",
-  "Notification Settings": "알림 설정",
-  "Purchase Record": "구매 기록",
+  "Settings": "관리",
+  "Payment": "결제 관리",
+  "Bank Account": "계좌 관리",
+  "Store Management": "사업 관리",
+  "ID Information": "개인 정보  관리",
+  "Notification": "알림 설정",
+  "Purchase History": "구매 기록",
   "Service Center": "고객센터",
   "About": "About",
   "Log Out": "Log Out",
   "Delete ID": "아이디 삭제",
   //forgot dialogs
-  "Forgot your Password": "비밀번호 찾기",
-  "Do you want to use mobile phone text authentication?": "핸드폰 문자인증을 하시겠습니까?",
-  "Certification": "인증",
-  "This number is not registered.": "등록되지 않은 번호입니다.",
-  "Confirm": "확인",
-  "Certification Number": "인증번호",
-  "The authentication number sent by text message Please enter":
-      "핸드폰 문자로 전송된 인증번호를\n입력 해주세요",
-  "The authentication number is incorrect.": "인증번호가 틀렸습니다.",
-  "Didn't you get your ID Number ?": "이증번호를 받지 못하였나요?",
-  "Change": "변화",
+  "Find Your Password": "비밀번호 찾기",
+  "Verify with your phone number.": "핸드폰 문자인증을 하시겠습니까?",
+  "Verify": "인증",
+  "Certification": "Certification",
+  "The number you have entered\nis not registered.": "등록되지 않은 번호입니다.",
+  "The authentication number is incorrect.":
+      "The authentication number is incorrect.",
+  "Confirm": "재전송",
+  "Incorrect verification code.": "인증번호가 틀렸습니다.",
+  "Certification Number": "Certification Number",
+  "Enter the verificati on code\nsent to your phone number.":
+      "핸드폰 문자로 전송된 인증번호를\n입력해주세요",
+  "Did not get the code?": "이증번호를 받지 못하였나요?",
+  "Your password is:": "비밀번호는:",
+  "Verification Code": "인증번호",
+  "Change": "변경",
   "Re-Send": "재전송",
   //login failed
   "Login Failed": "로그인 실패",
-  "Phone number or password\nDoes not match.": "전화번호 혹은 비밀번호가\n일치하지 않습니다.",
+  "The username or password\nyou entered is incorrect.":
+      "전화번호 혹은 비밀번호가\n일치하지 않습니다.",
   //phone change dialogs
-  "Phone Number Change": "전화번호 변경",
-  "To a new number in your name\nDo you want to change it?":
-      "고객님의 명의의 새로운 번호로\n변경 하시겠습니까?",
-  "Your phone number has changed.": "전화번호가 변경 되었습니다.",
-  "Your phone number does not  match.\nPlease verify your new number.":
+  "Update Your\nPhone Number": "전화번호 변경",
+  "Your phone number is not up to date.\nPlease update your phone number.":
       "고객님의 전화번호가 일치 하지않습니다.\n새로운 번호를 인증해주세요.",
+  "Your phone number has been updated.": "전화번호가 변경 되었습니다.",
+  "Will you update to your\nnew phone number?": "고객님의 명의의 새로운 번호로\n변경 하시겠습니까?",
   "Your phone number has been verified.": "전화번호가 인증 되었습니다.",
-  "Would you like to change it to?": "로 변경 하시겠습니까?",
+  "Will you update to": "로 변경 하시겠습니까?",
+  "Update": "변경",
   //sign up dialogs
   "Password is\nDoes not Match": "비밀번호가\n일치하지 않습니다.",
   //card registration
-  "Card Registration": "카드 등록",
-  "Congratulations on Signing up!": "가입을 축하합니다!",
-  "Please register the credit card to be used": "사용하실 신용카드를 등록 해주세요",
-  "This page will change Depending on the Payment system provider":
-      "This page will change Depending on the Payment system provider",
+  "Credit Card Registration": "카드 등록",
+  "Register your credit card": "가입을 축하합니다!",
+  "Next time": "다음에",
   "Enrollment": "등록",
   //sign up mobile
-  "Mobile phone authentication\nCompleted!": "핸드폰 본인인증 완료!",
-  "Please Set Password": "비밀번호를 설정해 주세요",
-  "Confirm Password": "비밀번호 확인",
+  "Number verified!": "핸드폰 본인인증 완료!",
+  "Set your password": "비밀번호를 설정해 주세요",
+  "Re-enter Password": "비밀번호 확인",
   "Join": "가입",
   //sign up page
   "Terms of service and conditions": "이용약관에 동의해 주세요",
@@ -100,7 +105,7 @@ const Map<String, String> koKR = {
   //deleteId dialog
   "ID": "아이디",
   "Do you want to delete it?": "를 삭제 하시겠습니까?",
-  "Please enter your current ID and password.": "현재 아이디 비밀번호를 입력해주세요.",
+  "Enter your current password.": "현재 아이디 비밀번호를 입력해주세요.",
   //logout dialog
   "Would you like to log out?": "로그아웃을 하시겠습니까?",
   "New Password": "새비밀번호",
@@ -108,17 +113,16 @@ const Map<String, String> koKR = {
   "Your Password has been Changed": "비밀번호가 변경 되었습니다.",
   "Password do not match": "비밀번호가 일치하지 않습니다.",
   //notification dialog
-  "Preview": "미리보기",
-  "Sound while running app": "앱 실행 중 사운드",
-  "Vibrating while running App": "앱 실행 중 진동",
+  "Show Previews": "미리보기",
+  "In-app Notifications": "앱 실행 중 사운드",
+  "In-app Vibration": "앱 실행 중 진동",
   //payment management dialog
-  "Payment Management": "지불 관리",
 
   //personal info dialog
   "Personal Information Management": "개인 정보 관리",
   //service dialog
-  "Enter My Email": "내 이메일 입력",
-  "Please enter your Inquiry": "문의 사항을 입력해주세요",
+  "My email address": "내 이메일 입력",
+  "What is your inquiry?": "문의 사항을 입력해주세요",
   "Send": "보내기",
   //edit item
   "Photo Registration": "사진 변경",
@@ -133,7 +137,7 @@ const Map<String, String> koKR = {
   "Verify your business and bank account": "사업자 등록번호와 계좌를 등록해 주세요",
   "Company Registration Number": "사업자 등록번호",
   "Business Name": "상호명",
-  "Name of Bank": "은행명",
+  "Bank": "은행명",
   "Account Number": "계좌번호",
   "Register": "등록",
   "Save Code": "저장",
@@ -175,16 +179,17 @@ const Map<String, String> koKR = {
   "By Item": "아이템별",
   "By Category": "카테고리별",
   //seller landing
-  "Please select a business site to manage": "관리할 사업장을 선택해주세요",
+  "Choose a store to change account.": "계좌를 변경하실 사업을 선택해주세요",
   "Pick and Go": "픽앤고",
   //stock reciept
   "QR Receipt": "QR 입고",
   "Individual warehousing": "개별 입고",
   //business manage
   "Pick and go": "픽앤고",
-  "Add Business": "사업 추가",
+  "Add Store": "사업 추가",
+  "Enter Business and bank account.": "사업자 등록번호와 계좌를 등록해 주세요",
   "Please select a business to change account": "계좌를 변경하실 사업을 선택해주세요",
-  "Please enter a new account to change": "변경하실 새 계좌를 입력해주세요",
+  "Enter new bank account.": "변경하실 새 계좌를 입력해주세요",
   "Account change completed": "계정 변경 완료",
   "The account with the trade name “Pick and Go”\nHas been changed.":
       '''상호명 ‘픽앤고’ 의 계좌가\n변경되었습니다.''',
@@ -194,6 +199,19 @@ const Map<String, String> koKR = {
   "Business addition completed": "사업 추가 완료",
   "The company name’***’\nHas been registered": "회사 명 '***'\n등록되었습니다",
   "Business certification failed\nplease try again": "비즈니스 인증 실패\n다시 시도 해주세요",
+  "Business Registration Number": "사업자 등록번호",
+  "Store Name": "상호명",
+  "Bank Name": "은행명",
+  "Bank Account Number": "계좌번호",
+  "Store Added": "사업 추가 완료",
+  "‘******’ has been\nadded to your account.": "상호명 ‘***’ 가\n등록 되었습니다",
+  "Change Business name": "상호명 변경",
+  "Delete Store": "사업 삭제",
+  "Change Name": "상호명 변경",
+  "Enter new name.": "새로운 상호명을 입력해주세요",
+  "Name Changed": "상호명 변경 완료",
+  "‘Pick N Go’ has been\nChanged to ‘*******’.":
+      "상호명 ‘픽앤고’ 가\n‘***’ 로 변경 되었습니다",
   //change company name
   "Change of Company Name": "상호명 변경",
   "Company name changed": "상호명 변경 완료",
@@ -208,6 +226,12 @@ const Map<String, String> koKR = {
   "Company name “Pick and Go”\nHas been deleted": "상호명 ‘픽앤고’ 가\n삭제 되었습니다",
   //deleted
   "Pick and Pay\nID is\nDeleted": "픽앤페이 셀러\n아이디가/n삭제되었습니다",
-  "Change Language": "언어 변경",
+  "Language": "언어 변경",
   "Required": "필수",
+  "Would you like to\nDelete ‘Pick N Go’?": "상호명 ‘픽앤고’ 를 \n삭제 하시겠습니까?",
+  "‘Pick N Go’ has been\ndeleted.": "상호명 ‘픽앤고’ 가\n삭제 되었습니다",
+  "Delete Complete": "사업 삭제 완료",
+  //
+  "Choose a store to manage": "관리할 사업장을 선택해주세요",
+  "Add Photo": "사진 변경",
 };

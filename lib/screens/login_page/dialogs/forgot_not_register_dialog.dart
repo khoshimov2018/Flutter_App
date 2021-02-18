@@ -17,10 +17,10 @@ forgotNotRegisterDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Forgot your Password".tr),
+            dialogTitle("Find Your Password".tr),
             v10(),
             Text(
-              "This number is not registered.".tr,
+              "The number you have entered\nis not registered.".tr,
               style: plainWhite,
               textAlign: TextAlign.center,
             ),

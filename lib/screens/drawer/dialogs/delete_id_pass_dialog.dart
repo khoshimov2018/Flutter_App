@@ -24,7 +24,7 @@ deleteIdPassDialog() {
             dialogTitle("Delete ID".tr),
             v20(),
             Text(
-              "Please enter your current ID and password.".tr,
+              "Enter your current password.".tr,
               style: plainWhite,
               textAlign: TextAlign.center,
             ),

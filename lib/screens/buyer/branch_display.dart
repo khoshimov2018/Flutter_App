@@ -36,7 +36,7 @@ class _BranchDisplayState extends State<BranchDisplay> {
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Text(
-                "‘Pick and Go Bangi Branch’\nIs this correct?".tr,
+                "Are you at\n‘Pick N Go Bangi’?".tr,
                 style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w600,
@@ -68,7 +68,7 @@ class _BranchDisplayState extends State<BranchDisplay> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Text(
-                          "Yeah".tr,
+                          "Yes".tr,
                           style: plainWhite,
                         ),
                       ),

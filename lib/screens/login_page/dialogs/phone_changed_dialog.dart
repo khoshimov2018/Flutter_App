@@ -16,10 +16,10 @@ phoneChangedDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Phone Number Change".tr),
+            dialogTitle("Update Your\nPhone Number".tr),
             v10(),
             Text(
-              "Your phone number has changed.".tr,
+              "Your phone number has been updated.".tr,
               style: plainWhite,
               textAlign: TextAlign.center,
             ),
@@ -28,7 +28,7 @@ phoneChangedDialog() {
               children: [
                 Expanded(
                   child: whiteDialogButton(
-                      title: "Cancel".tr, onTap: () => Get.back()),
+                      title: "Confirm".tr, onTap: () => Get.back()),
                 ),
               ],
             ),

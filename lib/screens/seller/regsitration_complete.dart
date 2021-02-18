@@ -49,7 +49,7 @@ class _RegistrationCompleteState extends State<RegistrationComplete> {
             height: 20,
           ),
           Text(
-            "Please register your business registration number and account".tr,
+            "Enter Business and bank account.".tr,
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
             textAlign: TextAlign.center,
           ),

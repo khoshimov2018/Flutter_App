@@ -33,7 +33,7 @@ editItemDialog() {
                     ),
                   ),
                   Text(
-                    "Photo Registration".tr,
+                    "Add Photo".tr,
                     style: TextStyle(
                         color: Colors.white,
                         decoration: TextDecoration.underline),

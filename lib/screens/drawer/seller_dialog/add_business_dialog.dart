@@ -28,30 +28,29 @@ addBusinessDialog() {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              dialogTitle("Account Management".tr),
+              dialogTitle("Add Store".tr),
               v40(),
               Text(
-                "Please register your business registration number and account"
-                    .tr,
+                "Enter Business and bank account.".tr,
                 style: plainWhite,
                 textAlign: TextAlign.center,
               ),
               v40(),
               kTextField(
                   keyBoardType: TextInputType.number,
-                  hintText: "Company Registration Number".tr,
+                  hintText: "Business Registration Number".tr,
                   controller: compantRegController),
               v60(),
               kTextField(
-                  hintText: "Business Name".tr,
+                  hintText: "Store Name".tr,
                   controller: businessNameController),
               v60(),
               kTextField(
-                  hintText: "Name of Bank".tr, controller: bankNameController),
+                  hintText: "Bank Name".tr, controller: bankNameController),
               v60(),
               kTextField(
                   keyBoardType: TextInputType.number,
-                  hintText: "Account Number".tr,
+                  hintText: "Bank Account Number".tr,
                   controller: acNumController),
               v40(),
               Row(
@@ -62,10 +61,9 @@ addBusinessDialog() {
                         onTap: () {
                           Get.back();
                           defaultDialog(
-                              header: "Business addition completed".tr,
-                              title:
-                                  "The company name’***’\nHas been registered"
-                                      .tr);
+                              header: "Store Added".tr,
+                              title: "‘******’ has been\nadded to your account."
+                                  .tr);
                         }),
                   ),
                   SizedBox(

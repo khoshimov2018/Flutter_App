@@ -18,10 +18,11 @@ newPhoneNumberChangeDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Phone Number Change".tr),
+            dialogTitle("Update Your\nPhone Number".tr),
             v10(),
             Text(
-              "To a new number in your name\nDo you want to change it?".tr,
+              "Your phone number is not up to date.\nPlease update your phone number."
+                  .tr,
               style: plainWhite,
               textAlign: TextAlign.center,
             ),
@@ -30,7 +31,7 @@ newPhoneNumberChangeDialog() {
               children: [
                 Expanded(
                   child: whiteDialogButton(
-                      title: "Change".tr,
+                      title: "Update".tr,
                       onTap: () {
                         Get.back();
                         phoneVerificationDialog(); //show

@@ -25,16 +25,15 @@ forgotOtpDialog() {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              dialogTitle("Forgot your Password".tr),
+              dialogTitle("Find Your Password".tr),
               v10(),
               kTextField(
                   keyBoardType: TextInputType.number,
-                  hintText: "Certification Number".tr,
+                  hintText: "Verification Code".tr,
                   controller: otpController),
               v10(),
               Text(
-                "The authentication number sent by text message Please enter"
-                    .tr,
+                "Enter the verification code\nsent to your phone number.".tr,
                 style: plainWhite,
                 textAlign: TextAlign.center,
               ),
@@ -43,7 +42,7 @@ forgotOtpDialog() {
                 children: [
                   Expanded(
                     child: whiteDialogButton(
-                        title: "Next".tr,
+                        title: "Verify".tr,
                         onTap: () {
                           Get.back();
                           if (otpController.text == pass) {
@@ -66,7 +65,7 @@ forgotOtpDialog() {
                 height: Get.height / 8,
               ),
               Text(
-                "Didn't you get your ID Number ?".tr,
+                "Did not get the code?".tr,
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
               ),

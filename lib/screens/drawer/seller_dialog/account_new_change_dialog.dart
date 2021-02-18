@@ -25,16 +25,15 @@ accountNewChangeDialog() {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              dialogTitle("Account Management".tr),
+              dialogTitle("Bank Account".tr),
               v40(),
               Text(
-                "Please enter a new account to change".tr,
+                "Enter new bank account.".tr,
                 style: plainWhite,
                 textAlign: TextAlign.center,
               ),
               v40(),
-              kTextField(
-                  hintText: "Name of Bank".tr, controller: bankNameController),
+              kTextField(hintText: "Bank".tr, controller: bankNameController),
               v60(),
               kTextField(
                   keyBoardType: TextInputType.number,
@@ -49,7 +48,7 @@ accountNewChangeDialog() {
                         onTap: () {
                           Get.back();
                           defaultDialog(
-                              header: "Account change completed".tr,
+                              header: "Bank Account".tr,
                               title:
                                   "The account with the trade name “Pick and Go”\nHas been changed."
                                       .tr);

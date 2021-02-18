@@ -18,10 +18,10 @@ accountManagementDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Account Management".tr),
+            dialogTitle("Bank Account".tr),
             v30(),
             Text(
-              "Please select a business to change account".tr,
+              "Choose a store to change account.".tr,
               style: plainWhite,
               textAlign: TextAlign.center,
             ),

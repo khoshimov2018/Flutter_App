@@ -18,12 +18,12 @@ notificationDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Notification Settings".tr),
+            dialogTitle("Notification".tr),
             v10(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Preview".tr, style: plainWhite),
+                Text("Show Previews".tr, style: plainWhite),
                 CupertinoSwitch(
                   value: true,
                   onChanged: (value) {},
@@ -36,7 +36,7 @@ notificationDialog() {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Sound while running app".tr, style: plainWhite),
+                Text("In-app Notifications".tr, style: plainWhite),
                 CupertinoSwitch(
                   value: false,
                   onChanged: (value) {},
@@ -50,7 +50,7 @@ notificationDialog() {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Vibrating while running App".tr,
+                  "In-app Vibration".tr,
                   style: plainWhite,
                 ),
                 CupertinoSwitch(

@@ -37,29 +37,8 @@ class _LandingPageState extends State<LandingPage> {
                     Get.to(LoginPage());
                   },
                   child: Padding(
-                    padding: EdgeInsets.only(left: 10.0),
-                    child: ZoomIn(
-                      child: Text(
-                        "back".tr,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 18,
-                          // shadows: [
-                          //   Shadow(
-                          //     color: Colors.black.withOpacity(0.3),
-                          //     offset: Offset(2, 2),
-                          //     blurRadius: 2,
-                          //   ),
-                          //   Shadow(
-                          //     color: Colors.white.withOpacity(0.3),
-                          //     offset: Offset(-2, -2),
-                          //     blurRadius: 2,
-                          //   )
-                          // ],
-                        ),
-                      ),
-                    ),
-                  ),
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Icon(Icons.arrow_back_ios_rounded)),
                 ),
                 InkWell(
                   onTap: () {
@@ -103,7 +82,7 @@ class _LandingPageState extends State<LandingPage> {
           ),
           ZoomIn(
             child: Text(
-              "Push the button\nPlease scan the store QR code".tr,
+              "Press the button to\nscan the store QR code".tr,
               style: TextStyle(
                 color: Colors.white,
               ),

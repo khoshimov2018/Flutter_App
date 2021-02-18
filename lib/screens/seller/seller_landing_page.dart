@@ -73,7 +73,7 @@ class _SellerLandingPageState extends State<SellerLandingPage> {
           ),
           v20(),
           Text(
-            "Please select a business site to manage".tr,
+            "Choose a store to manage".tr,
             style: plainWhite,
           ),
           v20(),

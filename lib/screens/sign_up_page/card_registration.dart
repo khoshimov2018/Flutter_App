@@ -21,11 +21,11 @@ class _CardRegistrationState extends State<CardRegistration> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          v20(),
+          v15(),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: Text(
-              "Card Registration".tr,
+              "Credit Card Registration".tr,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -35,7 +35,7 @@ class _CardRegistrationState extends State<CardRegistration> {
           ),
           v10(),
           Text(
-            "Congratulations on Signing up!".tr,
+            "Signed Up!".tr,
             style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
@@ -49,7 +49,7 @@ class _CardRegistrationState extends State<CardRegistration> {
             height: 20,
           ),
           Text(
-            "Please register the credit card to be used".tr,
+            "Register your credit card".tr,
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
           ),
           Expanded(
@@ -83,7 +83,7 @@ class _CardRegistrationState extends State<CardRegistration> {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Text(
-                        "Enrollment".tr,
+                        "Register".tr,
                         style: plainWhite,
                       ),
                     ),
@@ -100,7 +100,7 @@ class _CardRegistrationState extends State<CardRegistration> {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Text(
-                        "Next".tr,
+                        "Next time".tr,
                         style: plainWhite,
                       ),
                     ),

@@ -182,7 +182,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ],
                     ),
                     child: Text(
-                      "Join".tr,
+                      "Next".tr,
                       style: plainWhite,
                     ),
                   ),

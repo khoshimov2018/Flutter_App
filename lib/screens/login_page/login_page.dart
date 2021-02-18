@@ -50,13 +50,8 @@ class _LoginPageState extends State<LoginPage> {
                     Get.to(HomePage());
                   },
                   child: Padding(
-                    padding: EdgeInsets.only(left: 10.0),
-                    child: Text(
-                      "back".tr,
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-                    ),
-                  ),
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Icon(Icons.arrow_back_ios_rounded)),
                 ),
               ),
               SizedBox(
@@ -153,7 +148,7 @@ class _LoginPageState extends State<LoginPage> {
                   }
                 },
                 child: Text(
-                  "phone number change".tr,
+                  "Update your phone number".tr,
                   style: TextStyle(
                     color: Colors.white,
                     decoration: TextDecoration.underline,

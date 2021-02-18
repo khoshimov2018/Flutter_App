@@ -23,7 +23,7 @@ businessManageDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            dialogTitle("Business Management".tr),
+            dialogTitle("Store Management".tr),
             v30(),
             whiteDialogButton(
                 title: "Pick and go".tr,
@@ -32,7 +32,7 @@ businessManageDialog() {
                 }),
             v20(),
             whiteDialogButton(
-                title: "Add Business".tr,
+                title: "Add Store".tr,
                 onTap: () {
                   Get.back();
                   addBusinessDialog();
