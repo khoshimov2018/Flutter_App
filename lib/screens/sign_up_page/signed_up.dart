@@ -16,7 +16,7 @@ class _SignedUpState extends State<SignedUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: KColors.primaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,

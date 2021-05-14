@@ -16,7 +16,7 @@ class _StoreQRCodeState extends State<StoreQRCode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: KColors.primaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,

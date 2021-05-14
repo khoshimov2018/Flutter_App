@@ -14,7 +14,7 @@ class _RegistrationCompleteState extends State<RegistrationComplete> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: KColors.primaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,

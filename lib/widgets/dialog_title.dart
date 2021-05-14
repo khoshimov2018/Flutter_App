@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 Widget dialogTitle(String title) {
   return ZoomIn(
+    duration: Duration(milliseconds: 200),
     child: Text(
       title,
       style: TextStyle(

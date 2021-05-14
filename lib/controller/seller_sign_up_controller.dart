@@ -5,4 +5,6 @@ class SellerSignUPController extends GetxController {
   RxString businessName = "".obs;
   RxString bankName = "".obs;
   RxString acNum = "".obs;
+  RxString phoneNumber = "".obs;
+  RxString password = "".obs;
 }

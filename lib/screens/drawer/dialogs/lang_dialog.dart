@@ -1,13 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:picknpay/API/logout_service.dart';
 import 'package:picknpay/constant/kColors.dart';
+import 'package:picknpay/controller/home_controller.dart';
 import 'package:picknpay/services/localization_service.dart';
 import 'package:picknpay/style/text_styles.dart';
 import 'package:picknpay/widgets/buttons/white_dialog_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 langDialog() {
+  GetStorage box = GetStorage();
+
+  HomeController hC = Get.put(HomeController());
   var num;
   return Get.dialog(
     Padding(
@@ -50,8 +56,16 @@ langDialog() {
                     child: whiteDialogButton(
                       title: "Change".tr,
                       onTap: () async {
+                        hC.lang.value = num == 0 || num == null ? "English" : "한국어";
                         SharedPreferences pref =
                             await SharedPreferences.getInstance();
+                        if(box.read("buyer")){
+                          logoutService(buyer: true,logout: false);
+                        }else{
+                          logoutService(buyer: false,logout: false);
+                        }
+
+
                         LocalizationService().changeLocale(
                             num == 0 || num == null ? "English" : "한국어");
                         pref.setString("lang",

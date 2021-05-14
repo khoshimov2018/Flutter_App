@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:picknpay/constant/kColors.dart';
-import 'package:picknpay/controller/buyer_sign_up_controller.dart';
+import 'package:picknpay/controller/term_controller.dart';
 import 'package:picknpay/style/text_styles.dart';
 import 'package:picknpay/screens/home_page.dart';
 import 'package:picknpay/widgets/size_boxes.dart';
@@ -16,7 +16,7 @@ class _CardRegistrationState extends State<CardRegistration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: KColors.primaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,

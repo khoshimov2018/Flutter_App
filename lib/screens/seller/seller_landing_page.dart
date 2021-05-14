@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
+import 'package:picknpay/API/seller/get_store_service.dart';
 import 'package:picknpay/constant/kColors.dart';
+import 'package:picknpay/controller/login_controller.dart';
+import 'package:picknpay/controller/seller_controller.dart';
+import 'package:picknpay/models/store_model.dart';
 import 'package:picknpay/screens/drawer/kDrawer.dart';
 import 'package:picknpay/style/text_styles.dart';
 import 'package:picknpay/widgets/size_boxes.dart';
@@ -15,7 +20,16 @@ class SellerLandingPage extends StatefulWidget {
 }
 
 class _SellerLandingPageState extends State<SellerLandingPage> {
+  SellerController sellerController = Get.put(SellerController());
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  LoginController lC = Get.put(LoginController());
+
+  @override
+  void initState() {
+    getStoreService();
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -72,13 +86,21 @@ class _SellerLandingPageState extends State<SellerLandingPage> {
             style: plainWhite,
           ),
           v20(),
-          blackButton(
-              title: "Pick and Go".tr,
-              fontWeight: FontWeight.bold,
-              fontSize: 20.0,
-              onTap: () {
-                Get.offAll(BusinessHomePage());
-              }),
+      Obx((){
+        return    Expanded(
+          child:  sellerController.storeModel.value.store==null?Center(child: Lottie.asset("assets/svg/loading.json"),): sellerController.storeModel.value.store.length==0?Center(child: Text("No store is available"),):ListView.builder(padding: EdgeInsets.zero,itemBuilder:(ctx,index){
+            return  Padding(
+              padding:  EdgeInsets.only(left: 16,right: 16,bottom: 10),
+              child: blackButton(
+                  title: sellerController.storeModel.value.store[index].name,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                  onTap: () {
+                    Get.offAll(BusinessHomePage());
+                  }),
+            );
+          },itemCount: sellerController.storeModel.value.store.length,),);
+      })
         ],
       ),
     );

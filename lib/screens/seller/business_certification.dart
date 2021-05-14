@@ -1,6 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:picknpay/API/seller/seller_sign_up_service.dart';
 import 'package:picknpay/screens/sign_up_page/signed_up.dart';
+import 'package:picknpay/widgets/my_snackbar.dart';
 import 'package:picknpay/widgets/size_boxes.dart';
 import 'package:get/get.dart';
 import 'package:picknpay/constant/kColors.dart';
@@ -24,7 +26,7 @@ class _BusinessCertificationState extends State<BusinessCertification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: KColors.primaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -152,7 +154,13 @@ class _BusinessCertificationState extends State<BusinessCertification> {
                       sell.businessName.isNotEmpty &&
                       sell.bankName.isNotEmpty &&
                       sell.acNum.isNotEmpty) {
-                    Get.to(SignedUp());
+                    sellerSignUpService().then((value) {
+                      if(value){
+                        Get.to(SignedUp());
+                      }else{
+                        mySnackBar(title: "Error",message: "Something went wrong");
+                      }
+                    });
                   } else {}
                 },
                 child: ZoomIn(

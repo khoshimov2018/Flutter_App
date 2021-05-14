@@ -1,5 +1,4 @@
 import 'package:picknpay/screens/drawer/kDrawer.dart';
-import 'package:picknpay/screens/login_page/login_page.dart';
 import 'package:picknpay/widgets/size_boxes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,16 +29,16 @@ class _LandingPageState extends State<LandingPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                InkWell(
-                  onTap: () {
-                    Get.to(LoginPage());
-                  },
-                  child: Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Icon(Icons.arrow_back_ios_rounded)),
-                ),
+                // InkWell(
+                //   onTap: () {
+                //     Get.to(LoginPage());
+                //   },
+                //   child: Padding(
+                //       padding: const EdgeInsets.only(left: 10),
+                //       child: Icon(Icons.arrow_back_ios_rounded)),
+                // ),
                 InkWell(
                   onTap: () {
                     _scaffoldKey.currentState.openEndDrawer();

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:picknpay/constant/kColors.dart';
+import 'package:picknpay/controller/login_controller.dart';
 import 'package:picknpay/screens/drawer/dialogs/about_dialog.dart';
 import 'package:picknpay/screens/drawer/dialogs/delete_id_dialog.dart';
 import 'package:picknpay/screens/drawer/dialogs/lang_dialog.dart';
@@ -11,7 +12,7 @@ import 'package:picknpay/screens/drawer/dialogs/notification_dialog.dart';
 import 'package:picknpay/screens/drawer/dialogs/payment_manage_dialog.dart';
 import 'package:picknpay/screens/drawer/dialogs/personal_info_manage.dart';
 import 'package:picknpay/screens/drawer/dialogs/service_center_dialog.dart';
-import 'package:picknpay/screens/drawer/purchase_record.dart';
+import 'package:picknpay/screens/drawer/purchase_history.dart';
 import 'package:picknpay/screens/drawer/seller_dialog/account_manage_dialog.dart';
 import 'package:picknpay/screens/drawer/seller_dialog/business_manage_dialog.dart';
 import 'package:picknpay/services/localization_service.dart';
@@ -19,8 +20,8 @@ import 'package:picknpay/widgets/size_boxes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Widget kDrawer() {
+  LoginController lC = Get.put(LoginController());
   GetStorage box = GetStorage();
-  var _selectedLang = LocalizationService.locale;
   return Container(
     padding: EdgeInsets.only(right: 16),
     color: KColors.black,
@@ -33,6 +34,7 @@ Widget kDrawer() {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             FadeInLeft(
+              duration: Duration(milliseconds: 300),
               child: IconButton(
                   icon: Icon(
                     Icons.keyboard_arrow_right_rounded,
@@ -46,20 +48,24 @@ Widget kDrawer() {
             drawerItem(title: "Settings".tr, fontWeight: FontWeight.bold)
           ],
         ),
-        drawerItem(
-            title: box.read("buyer") ? "Payment".tr : "Bank Account".tr,
-            onTap: () {
-              box.read("buyer")
-                  ? paymentManageDialog()
-                  : accountManagementDialog();
-            }),
-        box.read("buyer")
-            ? SizedBox()
-            : drawerItem(
-                title: "Store Management".tr,
-                onTap: () {
-                  businessManageDialog();
-                }),
+        Obx(() {
+          return drawerItem(
+              title: lC.buyer.value ? "Payment".tr : "Bank Account".tr,
+              onTap: () {
+                box.read("buyer")
+                    ? paymentManageDialog()
+                    : accountManagementDialog();
+              });
+        }),
+        Obx(() {
+          return lC.buyer.value
+              ? SizedBox()
+              : drawerItem(
+                  title: "Store Management".tr,
+                  onTap: () {
+                    businessManageDialog();
+                  });
+        }),
         drawerItem(
             title: "ID Information".tr,
             onTap: () {
@@ -76,13 +82,15 @@ Widget kDrawer() {
               langDialog();
             }),
 
-        box.read("buyer")
-            ? drawerItem(
-                title: "Purchase History".tr,
-                onTap: () {
-                  Get.to(PurchaseRecord());
-                })
-            : SizedBox(),
+        Obx(() {
+          return lC.buyer.value
+              ? drawerItem(
+                  title: "Purchase History".tr,
+                  onTap: () {
+                    Get.to(PurchaseRecord());
+                  })
+              : SizedBox();
+        }),
         drawerItem(
             title: "Service Center".tr,
             onTap: () {
@@ -126,6 +134,7 @@ Widget drawerItem({title, onTap, fontWeight}) {
   return InkWell(
     onTap: onTap,
     child: FadeInRight(
+      duration: Duration(milliseconds: 300),
       child: Container(
         alignment: Alignment.centerRight,
         padding: EdgeInsets.all(10),

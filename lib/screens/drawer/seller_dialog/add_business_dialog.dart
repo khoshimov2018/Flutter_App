@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:picknpay/API/seller/get_store_service.dart';
+import 'package:picknpay/API/seller/post_store_service.dart';
+import 'package:picknpay/widgets/my_snackbar.dart';
 import 'package:picknpay/widgets/size_boxes.dart';
 import 'package:picknpay/constant/kColors.dart';
 import 'package:picknpay/style/text_styles.dart';
@@ -11,10 +14,10 @@ import 'package:picknpay/widgets/dialog_title.dart';
 import 'package:picknpay/widgets/text_fields/kText_field.dart';
 
 addBusinessDialog() {
-  TextEditingController acNumController = TextEditingController();
+  TextEditingController bankAcController = TextEditingController();
   TextEditingController bankNameController = TextEditingController();
-  TextEditingController compantRegController = TextEditingController();
-  TextEditingController businessNameController = TextEditingController();
+  TextEditingController businessRegController = TextEditingController();
+  TextEditingController storeNameController = TextEditingController();
 
   return Get.dialog(
     Dialog(
@@ -39,11 +42,11 @@ addBusinessDialog() {
               kTextField(
                   keyBoardType: TextInputType.number,
                   hintText: "Business Registration Number".tr,
-                  controller: compantRegController),
+                  controller: businessRegController),
               v60(),
               kTextField(
                   hintText: "Store Name".tr,
-                  controller: businessNameController),
+                  controller: storeNameController),
               v60(),
               kTextField(
                   hintText: "Bank Name".tr, controller: bankNameController),
@@ -51,7 +54,7 @@ addBusinessDialog() {
               kTextField(
                   keyBoardType: TextInputType.number,
                   hintText: "Bank Account Number".tr,
-                  controller: acNumController),
+                  controller: bankAcController),
               v40(),
               Row(
                 children: [
@@ -59,11 +62,31 @@ addBusinessDialog() {
                     child: whiteDialogButton(
                         title: "Add".tr,
                         onTap: () {
-                          Get.back();
-                          defaultDialog(
-                              header: "Store Added".tr,
-                              title: "‘******’ has been\nadded to your account."
-                                  .tr);
+                          bankNameController.text.trim();
+                          bankAcController.text.trim();
+                          businessRegController.text.trim();
+                          storeNameController.text.trim();
+                         if(bankNameController.text.isNotEmpty&&bankAcController.text.isNotEmpty&&storeNameController.text.isNotEmpty&&businessRegController.text.isNotEmpty){
+                           Get.back();
+                           postStoreService(businessRegController.text, storeNameController.text, bankNameController.text, bankAcController.text).then((value) {
+                             if(value){
+                               defaultDialog(
+                                   header: "Store Added".tr,
+                                   title: "${storeNameController.text} has been\nadded to your account."
+                                       .tr);
+                               getStoreService();
+                             }else{
+                               defaultDialog(
+                                   title:
+                                   "Business certification failed\nplease try again"
+                                       .tr,
+                                   header: "Add Business".tr);
+                             }
+                           });
+                         }else{
+                          mySnackBar(title: "Required",message: "All values are required");
+                         }
+
                         }),
                   ),
                   SizedBox(
@@ -73,11 +96,7 @@ addBusinessDialog() {
                     child: whiteDialogButton(
                         title: "Cancel".tr,
                         onTap: () {
-                          defaultDialog(
-                              title:
-                                  "Business certification failed\nplease try again"
-                                      .tr,
-                              header: "Add Business".tr);
+                        Get.back();
                         }),
                   ),
                 ],

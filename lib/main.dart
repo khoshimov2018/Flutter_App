@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
               ? Locale('en', 'US')
               : hC.lang.value == "한국어"
                   ? Locale('ko', 'KR')
-                  : Locale('ko', 'KR'), //default lang
+                  : Locale('en', 'US'), //default lang
           fallbackLocale: LocalizationService.fallbackLocale,
           translations: LocalizationService(),
           home: SplashScreen(),
